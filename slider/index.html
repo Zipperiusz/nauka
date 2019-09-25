@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <title>Zabawy na sliderze</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript">
+        var numer = Math.floor(Math.random()*7)+1;
+        var timer1 = 0;
+        var timer2 = 0;
+        function ustawslajd(span)
+           {
+            clearTimeout(timer1);
+            clearTimeout(timer2);
+            numer = span-1;
+            schowaj();
+            setTimeout("zmienslajd()",500);
+            
+            
+           } 
+        function schowaj()
+        {
+            $("#slider").fadeOut(500);
+        }
+            function zmienslajd()
+            {
+                numer++; if(numer>7)numer=1;
+                plik = "<img src=\"img/s"+numer+".png\">";
+                document.getElementById("slider").innerHTML = plik;
+                $("#slider").fadeIn(500);
+                timer1 = setTimeout("zmienslajd()",5000);
+                timer2 = setTimeout("schowaj()",4500);
+            }
+           
+        </script>
+    </head>
+    <body style="background-color:rgb(85, 84, 84);text-align: center;" onload="zmienslajd();">
+        <span onclick="ustawslajd(1);" style="cursor: pointer;">[ 1 ]</span>
+        <span onclick="ustawslajd(2);" style="cursor: pointer;">[ 2 ]</span>
+        <span onclick="ustawslajd(3);" style="cursor: pointer;">[ 3 ]</span>
+        <span onclick="ustawslajd(4);" style="cursor: pointer;">[ 4 ]</span>
+        <span onclick="ustawslajd(5);" style="cursor: pointer;">[ 5 ]</span>
+        <span onclick="ustawslajd(6);" style="cursor: pointer;">[ 6 ]</span>
+        <span onclick="ustawslajd(7);" style="cursor: pointer;">[ 7 ]</span>
+        <div id="slider">
+
+        </div>
+
+    </body>
+</html>

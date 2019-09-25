@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <title>Zabawy na liczbach</title>
+    </head>
+    <body style="background-color:rgb(85, 84, 84);text-align: center;">
+        <fieldset>
+        <input id="pole" type="text">
+        <button onclick="sprawdz();" type="button">Sprawdź</button>
+        <div id="wynik">Wpisz liczbę</div>
+        <div id="test"></div>
+        </fieldset>
+
+        <fieldset>
+            Wypisz liczby od<input id="l1" type="text"> do
+            <input id="l2" type="text">
+            <button onclick="wypisz();" type="button">Pokaż</button>
+            <div id="pomiedzy">d</div>
+            <input type="text" id="ddd">
+            <button onclick="compare()">SPRAWDŹ</button>
+        </fieldset>
+
+        <script type="text/javascript">
+        var l1 = 5;
+        var p1 = "5";
+        if(l1==p1) alert("TAK");
+        </script>
+        <script src="skrypt.js"></script>
+    </body>
+</html>

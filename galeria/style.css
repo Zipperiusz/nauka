@@ -1,0 +1,23 @@
+body
+{
+    background-color: #494545;
+    color:#efefef;
+    font-size: 28px;
+}
+.kafelek
+{
+width:19%;
+display:inline-block;
+}
+.kafelek img
+{width: 100%;}
+.big
+{
+    margin-left: auto;
+    margin-right: auto;
+    width:800px;
+}
+.big img
+{
+    width:100%;
+}
